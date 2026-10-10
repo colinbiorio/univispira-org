@@ -45,3 +45,10 @@ Until the DNS is changed, the site is reachable at the repository's Pages URL.
   it exists, the DNS change.
 - 2026-10-10 — P vs NP page: the Nineteenth's sentence corrected after its verification (the bit
   pays for the conditional existence of the short object, not for the quantifier).
+- 2026-10-10 — posts/002-move-in: the first video ad (Reel, 1080×1920, 24 s), after Colin's
+  verdict on post 001 (not provocative, all orb, typeset name). Real footage from the app on a
+  local server (orb stepped on the page's own clock; seven rooms phone-shaped), the cursive mark
+  for the name, Supreme and the metal gradient from the app's own stylesheet. `reel.html` is the
+  timeline, `render.mjs` renders and encodes it; footage and frames are not committed (capture
+  scripts live in the app repo: `scripts/ad-scout.mjs`, `scripts/ad-vt.mjs`). Rule for every
+  ad after this: the name is always the logo; show the rooms, not just the orb; video first.
