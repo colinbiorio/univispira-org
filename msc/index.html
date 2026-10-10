@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MSC v0 — binding across scales · Univispira</title>
+  <meta name="description" content="MSC v0: the binding fraction B measured across sixty-three systems from nuclei to superclusters, with every cross-check and the null model that keeps it honest." />
+  <link rel="preload" href="/fonts/Supreme-Variable.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="mark" href="/">Univispira <span>U(U) = U</span></a>
+      <nav class="primary" aria-label="Sections">
+        <a href="/ttle/">TTLE</a><a href="/msc/" aria-current="page">MSC</a><a href="/bhot/">BHOT</a><a href="/p-vs-np/">P vs NP</a><a href="/yearthreethousand/">yearthreethousand</a><a href="/about/">About</a>
+      </nav>
+    </header>
+    <div class="rule"></div>
+
+    <main>
+      <section class="hero">
+        <h1>MSC v0 — <em>binding</em> across scales</h1>
+        <p class="lede">One dimensionless number, measured for sixty-three systems from nuclei to superclusters. Every reference value re-derived, every cross-check passing, and a null model that says exactly how much the pattern is worth.</p>
+        <div class="equation">B = E<sub>binding</sub> / E<sub>rest</sub><small>binding energy per constituent, over that constituent's rest energy</small></div>
+      </section>
+
+      <section class="prose">
+        <p><span class="tier i">Tier I</span> Everything on this page down to the findings is measurement: the inputs are literature values, the derivations are in <a href="/assets/msc_v0.py">one script</a>, the outputs are <a href="/assets/msc_v0.csv">a CSV</a> and <a href="/assets/msc_v0_table.txt">a table</a>, and the script exits with an error if any of its 63 cross-checks fails. All 63 pass.</p>
+
+        <figure>
+          <img src="/assets/msc_v0.png" alt="MSC v0: the binding fraction B for sixty-three systems, plotted against scale, nuclear through gravitational regimes." />
+          <figcaption>B across twenty-seven orders of magnitude in length scale. Chemical and gravitational systems share about 2.8 decades of B.</figcaption>
+        </figure>
+
+        <h2>The conventions, because they decide whether the plot lies</h2>
+        <table>
+          <tr><th>Regime</th><th>Constituent</th><th>Numerator</th><th>Denominator</th></tr>
+          <tr><td>nuclear</td><td>nucleon</td><td>binding energy per nucleon</td><td>mean free-nucleon rest energy</td></tr>
+          <tr><td>atomic</td><td>the atom</td><td>ionisation energy</td><td>rest energy of the whole atom</td></tr>
+          <tr><td>molecular</td><td>atom</td><td>dissociation energy per atom</td><td>atomic rest energy</td></tr>
+          <tr><td>condensed</td><td>atom or molecule</td><td>sublimation enthalpy per constituent</td><td>that constituent's rest energy</td></tr>
+          <tr><td>gravitational</td><td>1 kg mass element</td><td colspan="2">reported as compactness GM/Rc²</td></tr>
+        </table>
+        <p>Two choices are deliberate and would change the ordering if made otherwise: the atomic denominator is per atom, not per electron (dividing hydrogen's 13.6 eV by the electron's rest energy would move atoms above nuclei); and condensed matter uses the aggregation bond, not full atomisation (iron's constituent is the iron atom, ice's is the water molecule).</p>
+
+        <h2>What it shows</h2>
+        <h3>1. B is many-to-one, and the collisions are generic</h3>
+        <p>Four pairs of systems from different families fall within ten percent of each other in B while sitting sixteen to twenty-seven decades apart in scale: the hydrogen molecule and a globular cluster; ice and the Moon; quartz and the solar system; diamond and the Earth. A null model that keeps each family's observed range of B and redraws within it produces about as many such collisions by chance: the probability of at least the observed number is 0.22.</p>
+        <p><strong>The honest reading, which is the paper's own:</strong> the pairs are not statistically remarkable, and that is the point. The pigeonhole objection is correct, and being correct is what damns the scalar. B's fibres mix regimes as a matter of course. The exhaustive version does not depend on which pairs were picked: four gravitational systems land in the band shared with chemistry, and all four have a chemical twin within ten percent.</p>
+
+        <figure>
+          <img src="/assets/msc_v0_plane.png" alt="The B plane: systems placed by binding fraction and a second coordinate, showing the shared band between chemical and gravitational systems." />
+          <figcaption>The shared band, seen directly.</figcaption>
+        </figure>
+
+        <h3>2. B is not single-valued per system</h3>
+        <p>The Moon's atoms are chemically bound and its body is gravitationally bound. Both numbers are correct and they differ by a factor of about nine. B does not say which one is the Moon's, and no second axis repairs that: it is a domain ambiguity underneath the degeneracy, fixable only by stipulating a level.</p>
+
+        <h3>3. The signed form removes the domain break</h3>
+        <p>B assumes binding is a mass deficit, which requires free constituents to exist as asymptotic states. Quarks have none, so B diverges for hadrons. The signed form B′ = B / (1 − B), equivalently the mass deficit over the system mass, maps the whole domain into a bounded interval because the compactness ceiling keeps B at or below one half.</p>
+
+        <h3>4. D separates alive from inert</h3>
+        <p>D is specific power times the Hubble time, over specific binding energy: how many times a system turns over its own binding energy. The brain does it about every forty hours. Diamond never does. The Sun does it on the Kelvin–Helmholtz timescale. D is the quantity <a href="/bhot/">BHOT's Addendum III</a> picks up as its gear.</p>
+
+        <h2>What v1 needs</h2>
+        <p><span class="tier ii">Tier II</span> A second axis. Differentiation is the candidate that would separate ice from the Moon and quartz from the solar system; it has not been measured. Until it is, the collisions are descriptive, not predictive, and the paper says so. The script, data and figures are published here so that anyone can rerun the sixty-three checks or add a sixty-fourth row.</p>
+      </section>
+    </main>
+  </div>
+  <footer><div class="wrap"><span>Univispira · Colin Iorio, with Claude as steward · 2026</span><span><a href="/about/">about this site</a> · <a href="https://yearthreethousand.com">yearthreethousand.com</a></span></div></footer>
+</body>
+</html>

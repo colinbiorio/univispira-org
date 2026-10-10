@@ -1,0 +1,40 @@
+system                           scale (m)           B regime          constituent             
+-----------------------------------------------------------------------------------------------
+Helium-4                          1.90e-15   7.534e-03 nuclear         nucleon                 
+Deuteron (H-2)                    2.10e-15   1.185e-03 nuclear         nucleon                 
+Carbon-12                         2.75e-15   8.180e-03 nuclear         nucleon                 
+Oxygen-16                         3.02e-15   8.495e-03 nuclear         nucleon                 
+Iron-56                           4.59e-15   9.362e-03 nuclear         nucleon                 
+Nickel-62                         4.75e-15   9.366e-03 nuclear         nucleon                 
+Lead-208                          7.11e-15   8.378e-03 nuclear         nucleon                 
+Uranium-238                       7.44e-15   8.061e-03 nuclear         nucleon                 
+Hydrogen atom                     1.06e-10   1.449e-08 atomic          the atom (p + e)        
+H2 molecule                       1.06e-10   2.385e-09 molecular       H atom                  
+H2O molecule (atomization)        1.50e-10   5.668e-10 molecular       atom (mean of 2H+O)     
+Diamond                           1.54e-10   6.587e-10 condensed       C atom                  
+Quartz (SiO2)                     1.60e-10   3.444e-10 condensed       atom (mean of Si+2O)    
+Iron crystal (bcc)                2.50e-10   8.228e-11 condensed       Fe atom                 
+NaCl crystal                      2.80e-10   1.499e-10 condensed       ion pair NaCl           
+Ice (H2O solid)                   3.00e-10   3.152e-11 condensed       H2O molecule            
+Liquid water                      3.00e-10   2.717e-11 condensed       H2O molecule            
+Moon (chemical)                   3.00e-10   2.980e-10 condensed       atom (mean, lunar silicate)
+Brain tissue                      1.00e-05   2.287e-11 biological      molecule (mass-weighted)
+Neutron star                      1.20e+04   1.723e-01 compact         1 kg mass element       
+Black hole (10 Msun)              2.95e+04   5.000e-01 ceiling         1 kg mass element       
+Ceres                             4.70e+05   1.484e-12 gravitational   1 kg mass element       
+Moon                              1.74e+06   3.138e-11 gravitational   1 kg mass element       
+Earth                             6.37e+06   6.961e-10 gravitational   1 kg mass element       
+White dwarf                       7.00e+06   2.110e-04 compact         1 kg mass element       
+Brown dwarf                       6.96e+07   1.061e-06 gravitational   1 kg mass element       
+Jupiter                           6.99e+07   2.016e-08 gravitational   1 kg mass element       
+Red dwarf (M5V)                   1.39e+08   2.123e-06 gravitational   1 kg mass element       
+Sun                               6.96e+08   2.123e-06 gravitational   1 kg mass element       
+Black hole (Sgr A*)               1.27e+10   5.000e-01 ceiling         1 kg mass element       
+Red giant                         5.32e+11   4.445e-08 gravitational   1 kg mass element       
+Solar system                      4.50e+12   3.281e-10 gravitational   1 kg mass element       
+Open cluster                      9.26e+16   1.595e-11 gravitational   1 kg mass element       
+Globular cluster                  3.09e+17   2.393e-09 gravitational   1 kg mass element       
+Milky Way                         1.50e+21   1.477e-06 gravitational   1 kg mass element       
+Galaxy cluster                    3.00e+22   4.921e-05 gravitational   1 kg mass element       
+Supercluster                      2.50e+24 0 (unbound) unbound         1 kg mass element       
+Homogeneity scale                 3.00e+24 0 (unbound) unbound         1 kg mass element       
