@@ -43,3 +43,5 @@ Until the DNS is changed, the site is reachable at the repository's Pages URL.
   Nineteenth Swing), yearthreethousand, about. Owed: Addenda I–II of BHOT (Colin's), a rendering
   of the TTLE paper's full text in HTML (only the abstract and §8 are on the page), MSC v1 when
   it exists, the DNS change.
+- 2026-10-10 — P vs NP page: the Nineteenth's sentence corrected after its verification (the bit
+  pays for the conditional existence of the short object, not for the quantifier).
