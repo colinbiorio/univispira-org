@@ -59,3 +59,6 @@ Until the DNS is changed, the site is reachable at the repository's Pages URL.
   live door card. Glass labels (the app's frost) over busy frames, which 002 lacked. Per-ad
   ledger and the Instagram plan live in the steward's memory; each post's `caption.md` says
   what to measure against the previous one.
+- 2026-10-11 — ttle/paper/: the full text of the TTLE paper set in HTML (nine sections, the
+  references with anchors, equations inline), linked from the TTLE page. Typographic changes only;
+  the PDF stays authoritative. This closes the "full TTLE HTML" debt from the first version.
