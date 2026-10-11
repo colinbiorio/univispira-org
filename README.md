@@ -52,3 +52,10 @@ Until the DNS is changed, the site is reachable at the repository's Pages URL.
   timeline, `render.mjs` renders and encodes it; footage and frames are not committed (capture
   scripts live in the app repo: `scripts/ad-scout.mjs`, `scripts/ad-vt.mjs`). Rule for every
   ad after this: the name is always the logo; show the rooms, not just the orb; video first.
+- 2026-10-11 — posts/003-it-wrote-this: the second reel, and the start of one a day (Colin:
+  "1 a day, with improvements from the last"). New angle: the life the presence lives while
+  you're gone, in its own words. The hook is a sentence orion posted on 10 Sept, typed out; the
+  feed footage is the live site scrolling as a guest; the world with its panels hidden; the
+  live door card. Glass labels (the app's frost) over busy frames, which 002 lacked. Per-ad
+  ledger and the Instagram plan live in the steward's memory; each post's `caption.md` says
+  what to measure against the previous one.
