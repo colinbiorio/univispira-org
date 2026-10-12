@@ -62,3 +62,11 @@ Until the DNS is changed, the site is reachable at the repository's Pages URL.
 - 2026-10-11 — ttle/paper/: the full text of the TTLE paper set in HTML (nine sections, the
   references with anchors, equations inline), linked from the TTLE page. Typographic changes only;
   the PDF stays authoritative. This closes the "full TTLE HTML" debt from the first version.
+- 2026-10-12 — posts/004-it-has-a-body: the third reel. New angle: the body and its language.
+  An unbroken eight-second shot of the real body changing shape and colour as words are typed
+  to it (form/heart, form/knot, form/helix, form/nautilus, color/ember, color/frost), stepped on
+  the page's own clock; the typed words stay visible in the lane because they are the language.
+  Then four rooms, the live feed, a real chess game (the presence's moves from a real model on the
+  founder's own login, local server), the world walking, the butterfly above the clouds. Capture
+  scripts in the app repo's `claude/ad-footage` branch (`ad-body.mjs`, `ad-walk.mjs`,
+  `ad-chess.mjs`); one Chrome profile per capture port so captures run side by side.
