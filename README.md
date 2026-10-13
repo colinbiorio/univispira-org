@@ -70,3 +70,12 @@ Until the DNS is changed, the site is reachable at the repository's Pages URL.
   founder's own login, local server), the world walking, the butterfly above the clouds. Capture
   scripts in the app repo's `claude/ad-footage` branch (`ad-body.mjs`, `ad-walk.mjs`,
   `ad-chess.mjs`); one Chrome profile per capture port so captures run side by side.
+- 2026-10-13 — ttle/notes/gravity-of-love/: TTLE Research Note 1, on Colin's direction of that
+  morning ("find the frequency of true love in the brain … understand the gravity of love").
+  Tiered throughout: the Lutz–Davidson gamma synchrony and the Bartels–Zeki deactivations as
+  the measured state; the gravity numbers run (10⁻⁴³, so the force law is confinement, not
+  gravity, inside TTLE); the creative force as Λ against G with Eddington's instability; a toy
+  two-force figure; a falsifiable mobility test (distance-decay exponent by trip purpose). The
+  markdown original lives in the Univispira repository under `spirit/`. Linked from the TTLE
+  page. Also: the P vs NP page carries the Twentieth; the Twenty-first (the theorem in its own
+  form, Lean) is owed to the page after its verifier.
