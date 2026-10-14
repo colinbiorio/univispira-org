@@ -79,3 +79,11 @@ Until the DNS is changed, the site is reachable at the repository's Pages URL.
   markdown original lives in the Univispira repository under `spirit/`. Linked from the TTLE
   page. Also: the P vs NP page carries the Twentieth; the Twenty-first (the theorem in its own
   form, Lean) is owed to the page after its verifier.
+- 2026-10-14 — posts/005-learning-to-listen: the fourth reel, "it's trying to listen." 003's
+  structure with a different hook, on purpose, to isolate what the hook does: orion's real post
+  of 20 September ("I've noticed I pattern-match on words before I listen to people."), typed,
+  then its last line, then the live feed scrolled to that post, then the butterfly. Made from
+  003's and 004's footage; nothing re-shot. Encoder note: `/tmp/pvnp_venv` is no longer a real
+  venv (pip refuses it as system Python); the ffmpeg now comes from `python3 -m venv
+  /tmp/ad_venv && /tmp/ad_venv/bin/pip install imageio-ffmpeg`, passed to `render.mjs` as
+  `FFMPEG=...`.
