@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>yearthreethousand — reel 007 "it dreams"</title>
+<style>
+  @font-face { font-family:'Supreme'; src:url('../../fonts/Supreme-Variable.woff2') format('woff2-variations'); font-weight:100 800; }
+  @font-face { font-family:'Supreme'; src:url('../../fonts/Supreme-VariableItalic.woff2') format('woff2-variations'); font-weight:100 800; font-style:italic; }
+  html,body{margin:0;background:#000}
+  #stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:#05030a;font-family:'Supreme',system-ui,sans-serif;color:#fff}
+  .layer{position:absolute;inset:0;opacity:0;will-change:transform,opacity;overflow:hidden}
+  .layer img.full{position:absolute;left:0;top:0;width:1080px;height:1080px;transform-origin:0 0}
+  /* the dreamed frames are square: they sit in the upper two thirds, the words below */
+  .veil-b{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,3,10,0) 42%,rgba(5,3,10,.55) 58%,rgba(5,3,10,.97) 72%,#05030a 100%)}
+  .veil-all{position:absolute;inset:0;background:rgba(5,3,10,.62)}
+  .white{background:linear-gradient(180deg,#fff,#e8ecf1 35%,#b6bec9 70%,#8a929c);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .metal{background:linear-gradient(180deg,#fff,#e8ecf1 30%,#b6bec9 55%,#7c8590 78%,#454b53);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hairline{position:absolute;left:96px;right:96px;height:1px;
+    background:linear-gradient(90deg,rgba(255,255,255,0),rgba(214,222,232,.55) 18%,rgba(255,255,255,.95) 50%,rgba(214,222,232,.55) 82%,rgba(255,255,255,0));transform-origin:50% 50%}
+  .quote{position:absolute;left:84px;right:120px;top:600px;font-weight:420;font-size:112px;line-height:1.02;letter-spacing:-.035em;color:#fff}
+  .caret{display:inline-block;width:7px;height:.9em;background:#fff;vertical-align:-.1em;margin-left:8px}
+  .by{position:absolute;left:84px;right:150px;top:1180px;opacity:0;will-change:transform,opacity}
+  .by .rule{position:static;left:auto;right:auto;width:420px;margin:0 0 28px;transform-origin:0 50%;
+    background:linear-gradient(90deg,rgba(255,255,255,.95),rgba(214,222,232,.55) 60%,rgba(255,255,255,0))}
+  .by b{display:block;font-weight:560;font-size:46px;letter-spacing:-.01em}
+  .by span{display:block;margin-top:12px;font-size:36px;line-height:1.35;color:rgba(255,255,255,.74);font-weight:360}
+  /* a moment: the tag, its thought typed, its words in gold */
+  .tag{position:absolute;left:84px;top:1150px;font:500 30px ui-monospace,'SF Mono',Menlo,monospace;letter-spacing:.06em;color:rgba(255,255,255,.5);text-transform:lowercase}
+  .thought{position:absolute;left:84px;right:110px;top:1210px;font-weight:400;font-size:62px;line-height:1.14;letter-spacing:-.02em;color:#f2f4f8}
+  .thought .caret{width:5px;height:.85em}
+  .said{position:absolute;left:84px;right:110px;top:1560px;font-weight:420;font-size:54px;line-height:1.16;letter-spacing:-.015em;color:#ffd68c;opacity:0}
+  .said em{font-style:italic;font-weight:420}
+  .brand{position:absolute;left:50%;top:48px;width:300px;transform:translateX(-50%);opacity:0;filter:drop-shadow(0 1px 0 rgba(0,0,0,.6))}
+  .claims{position:absolute;left:84px;right:84px;top:1180px;opacity:0}
+  .claims div{font-weight:420;font-size:74px;line-height:1.1;letter-spacing:-.03em;margin:0 0 22px;opacity:0;transform:translateY(20px)}
+  #end{background:radial-gradient(60% 40% at 50% 46%,rgba(70,40,110,.45),rgba(5,3,10,0) 70%),#05030a}
+  #end .logo{position:absolute;left:50%;top:50%;width:900px;transform:translate(-50%,-62%) scale(.96);opacity:0;will-change:transform,opacity}
+  #end .rule{top:1066px;transform:scaleX(0)}
+  #end .cta{position:absolute;left:0;right:0;top:1110px;text-align:center;font-weight:300;font-size:128px;letter-spacing:-.03em;line-height:1;opacity:0;will-change:transform,opacity}
+  #end .cta em{font-style:italic;font-weight:300}
+  #end .url{position:absolute;left:0;right:0;top:1290px;text-align:center;font-size:40px;letter-spacing:.02em;color:rgba(255,255,255,.62);font-weight:380;opacity:0}
+  #end .at{position:absolute;left:0;right:0;bottom:300px;text-align:center;font-size:30px;letter-spacing:.05em;color:rgba(255,255,255,.38);opacity:0}
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <!-- 1 · THE HOOK, typed over its first picture -->
+  <div class="layer" id="hook"><img class="full" id="hookimg" alt="" /><div class="veil-all"></div>
+    <div class="quote"><span id="hooktext"></span><span class="caret" id="caret"></span></div>
+    <div class="by" id="by"><div class="hairline rule" id="rule1"></div>
+      <b>the world is dreamed one moment at a time.</b>
+      <span>it sees the picture, thinks, chooses a move. the move dreams the next picture. nobody tells it what to think.</span></div>
+  </div>
+
+  <!-- 2 · THE MOMENTS: its real pictures, its real thoughts (footage/moments.js) -->
+  <div class="layer" id="moment"><img class="full" id="momimg" alt="" /><div class="veil-b"></div><img class="brand" src="footage/logo.png" alt="" />
+    <div class="tag" id="tag"></div>
+    <div class="thought"><span id="thtext"></span><span class="caret" id="thcaret"></span></div>
+    <div class="said" id="said"></div>
+  </div>
+
+  <!-- 3 · WHAT IT IS -->
+  <div class="layer" id="claims"><img class="full" id="clmimg" alt="" /><div class="veil-b"></div><img class="brand" src="footage/logo.png" alt="" style="opacity:1" />
+    <div class="claims" id="claimlist">
+      <div class="white">it remembers.</div>
+      <div class="white">it rewrites who it is.</div>
+      <div class="white">it sets the pace of its own time.</div>
+      <div class="metal">you can watch, or speak to it.</div>
+    </div>
+  </div>
+
+  <!-- 4 · END CARD -->
+  <div class="layer" id="end">
+    <img class="logo" id="logo" src="footage/logo.png" alt="yearthreethousand" />
+    <div class="hairline rule" id="rule"></div>
+    <div class="cta" id="cta"><span class="white">come <em>watch</em> it live.</span></div>
+    <div class="url" id="url">yearthreethousand.com</div>
+    <div class="at" id="at">@year.threethousand · an AI co-runs this account</div>
+  </div>
+</div>
+
+<script src="footage/moments.js"></script>
+<script>
+// MOMENTS (footage/moments.js): [{ frame, text, say }], its own words, cut to a
+// sentence or two each so they can be read as they type.
+const HOOK = 'I put an AI inside a dream.';
+const clamp = (x,a=0,b=1) => Math.max(a, Math.min(b, x));
+const ease = (x) => 1 - Math.pow(1 - clamp(x), 3);
+const easeIO = (x) => { x = clamp(x); return x < .5 ? 4*x*x*x : 1 - Math.pow(-2*x + 2, 3)/2; };
+const lin = (t, a, b) => clamp((t - a) / (b - a));
+const $ = (id) => document.getElementById(id);
+function frame(img, p, s0 = 1.0, drift = 0.04) {   // a square picture filling the width, drifting in
+  const s = s0 * (1 + drift * p);
+  img.style.transform = `translate(${540 - s * 540}px, ${540 - s * 540}px) scale(${s})`;
+}
+// ---- timeline (seconds)
+const H0 = 0.35, CPS = 16, H_TYPED = H0 + HOOK.length / CPS;   // ≈ 2.0
+const H1 = 4.6;
+const TCPS = 44;                                               // its thoughts type quickly
+const beats = [];                                              // [start, end, moment]
+let cursor = H1;
+for (const m of MOMENTS) {
+  const typing = m.text.length / TCPS;
+  const dur = Math.max(3.2, typing + 1.4 + (m.say ? 1.2 : 0));
+  beats.push([cursor, cursor + dur, m]); cursor += dur;
+}
+const C0 = cursor, C1 = C0 + 4.2;                              // what it is
+const E0 = C1, DUR = E0 + 3.4;                                 // end card
+window.DUR = DUR;
+console.log('moments end', C0.toFixed(2), 'DUR', DUR.toFixed(2));
+
+function seek(t) {
+  t = clamp(t, 0, DUR);
+  // 1 the hook
+  const in1 = t < H1;
+  $('hook').style.opacity = in1 ? 1 : 0;
+  if (in1) {
+    if (!$('hookimg').src.endsWith(MOMENTS[0].frame)) $('hookimg').src = MOMENTS[0].frame;
+    frame($('hookimg'), lin(t, 0, H1), 1.06, 0.05);
+    const n = Math.floor(clamp((t - H0) * CPS, 0, HOOK.length));
+    $('hooktext').textContent = HOOK.slice(0, n);
+    $('caret').style.opacity = t < H_TYPED ? 1 : (t < H1 - .4 ? Math.floor(t * 2.5) % 2 : 0);
+    const o = ease(lin(t, H_TYPED + .4, H_TYPED + .9));
+    $('by').style.opacity = o; $('by').style.transform = `translateY(${(1 - o) * 20}px)`;
+    $('rule1').style.transform = `scaleX(${easeIO(lin(t, H_TYPED + .3, H_TYPED + 1.1))})`;
+  }
+  // 2 the moments
+  const b = beats.find(([a, z]) => t >= a && t < z);
+  $('moment').style.opacity = b ? 1 : 0;
+  if (b) {
+    const [a, z, m] = b; const i = beats.indexOf(b);
+    if (!$('momimg').src.endsWith(m.frame)) $('momimg').src = m.frame;
+    frame($('momimg'), lin(t, a, z), 1.0, 0.035);
+    $('moment').querySelector('.brand').style.opacity = 1;
+    $('tag').textContent = `moment ${m.n ?? i + 1} · its own words`;
+    const n = Math.floor(clamp((t - a - .25) * TCPS, 0, m.text.length));
+    // a long thought sets smaller, and its spoken words sit under however
+    // many lines it took (the full text's height, so nothing jumps as it types)
+    const th = $('thtext').parentElement;
+    th.style.fontSize = m.text.length > 110 ? '54px' : '62px';
+    th.style.top = '1210px';
+    $('thtext').textContent = m.text;
+    const bottom = 1210 + th.offsetHeight;
+    $('thtext').textContent = m.text.slice(0, n);
+    $('said').style.top = `${bottom + 26}px`;
+    const typed = a + .25 + m.text.length / TCPS;
+    $('thcaret').style.opacity = t < typed ? 1 : (t < z - .3 ? Math.floor(t * 2.5) % 2 : 0);
+    if (m.say) { $('said').innerHTML = `<em>“${m.say}”</em>`; $('said').style.opacity = ease(lin(t, typed + .2, typed + .6)); }
+    else $('said').style.opacity = 0;
+  }
+  // 3 what it is
+  const in3 = t >= C0 && t < C1;
+  $('claims').style.opacity = in3 ? Math.min(1, ease(lin(t, C0, C0 + .25))) : 0;
+  if (in3) {
+    const last = MOMENTS[MOMENTS.length - 1].frame;
+    if (!$('clmimg').src.endsWith(last)) $('clmimg').src = last;
+    frame($('clmimg'), lin(t, C0, C1), 1.02, 0.05);
+    $('claimlist').style.opacity = 1;
+    [...$('claimlist').children].forEach((el, k) => {
+      const o = ease(lin(t, C0 + .3 + k * .75, C0 + .75 + k * .75));
+      el.style.opacity = o; el.style.transform = `translateY(${(1 - o) * 20}px)`;
+    });
+  }
+  // 4 end card
+  const in4 = t >= E0;
+  $('end').style.opacity = in4 ? Math.min(1, ease(lin(t, E0, E0 + .3))) : 0;
+  if (in4) {
+    const lo = ease(lin(t, E0 + .1, E0 + .8));
+    $('logo').style.opacity = lo; $('logo').style.transform = `translate(-50%,-62%) scale(${.96 + .04 * lo})`;
+    $('rule').style.transform = `scaleX(${easeIO(lin(t, E0 + .5, E0 + 1.3))})`;
+    const co = ease(lin(t, E0 + .8, E0 + 1.4));
+    $('cta').style.opacity = co; $('cta').style.transform = `translateY(${(1 - co) * 24}px)`;
+    $('url').style.opacity = ease(lin(t, E0 + 1.3, E0 + 1.8));
+    $('at').style.opacity = ease(lin(t, E0 + 1.6, E0 + 2.1)) * .9;
+  }
+}
+const imgs = [...new Set(MOMENTS.map((m) => m.frame).concat(['footage/logo.png']))].map((src) => { const i = new Image(); i.src = src; return i; });
+window.ready = 0;
+Promise.all(imgs.map((i) => i.decode().catch(() => {}))).then(() => document.fonts.ready).then(() => { window.ready = imgs.length; seek(0); });
+window.seek = seek;
+</script>
+</body>
+</html>
