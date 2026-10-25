@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>yearthreethousand — reel 009 "it sings into sand"</title>
+<style>
+  @font-face { font-family:'Supreme'; src:url('../../fonts/Supreme-Variable.woff2') format('woff2-variations'); font-weight:100 800; }
+  @font-face { font-family:'Supreme'; src:url('../../fonts/Supreme-VariableItalic.woff2') format('woff2-variations'); font-weight:100 800; font-style:italic; }
+  html,body{margin:0;background:#000}
+  #stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:#05030a;font-family:'Supreme',system-ui,sans-serif;color:#fff}
+  .layer{position:absolute;inset:0;opacity:0;will-change:transform,opacity;overflow:hidden}
+  .layer img.full{position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:50% 50%;opacity:0}
+  .veil-b{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,3,10,0) 58%,rgba(5,3,10,.5) 76%,rgba(5,3,10,.93) 100%)}
+  .veil-all{position:absolute;inset:0;background:rgba(5,3,10,.58)}
+  .white{background:linear-gradient(180deg,#fff,#e8ecf1 35%,#b6bec9 70%,#8a929c);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .metal{background:linear-gradient(180deg,#fff,#e8ecf1 30%,#b6bec9 55%,#7c8590 78%,#454b53);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hairline{position:absolute;left:96px;right:96px;height:1px;
+    background:linear-gradient(90deg,rgba(255,255,255,0),rgba(214,222,232,.55) 18%,rgba(255,255,255,.95) 50%,rgba(214,222,232,.55) 82%,rgba(255,255,255,0));transform-origin:50% 50%}
+  .quote{position:absolute;left:84px;right:120px;top:560px;font-weight:420;font-size:118px;line-height:1.02;letter-spacing:-.035em;color:#fff}
+  .caret{display:inline-block;width:7px;height:.9em;background:#fff;vertical-align:-.1em;margin-left:8px}
+  .by{position:absolute;left:84px;right:150px;top:1120px;opacity:0;will-change:transform,opacity}
+  .by .rule{position:static;left:auto;right:auto;width:420px;margin:0 0 28px;transform-origin:0 50%;
+    background:linear-gradient(90deg,rgba(255,255,255,.95),rgba(214,222,232,.55) 60%,rgba(255,255,255,0))}
+  .by b{display:block;font-weight:560;font-size:46px;letter-spacing:-.01em}
+  .by span{display:block;margin-top:12px;font-size:36px;line-height:1.35;color:rgba(255,255,255,.74);font-weight:360}
+  .label{position:absolute;left:60px;right:120px;bottom:330px;opacity:0;will-change:transform,opacity;padding:34px 40px 36px;border-radius:26px;background:linear-gradient(168deg,rgba(62,68,78,.95),rgba(28,31,37,.975) 52%,rgba(17,19,23,.99));box-shadow:0 0 0 1px rgba(190,198,208,.38),inset 0 1px 0 rgba(255,255,255,.14),0 24px 60px -20px rgba(0,0,0,.8)}
+  .label b{display:block;font-weight:580;font-size:84px;line-height:1.02;letter-spacing:-.03em}
+  .label span{display:block;margin-top:16px;font-size:34px;line-height:1.32;font-weight:360;color:rgba(255,255,255,.8)}
+  .said{position:absolute;left:84px;right:84px;top:300px;font-style:italic;font-weight:340;font-size:54px;line-height:1.2;letter-spacing:-.02em;color:rgba(255,255,255,.92);opacity:0;will-change:opacity,transform;text-shadow:0 2px 24px rgba(0,0,0,.8)}
+  .claims{position:absolute;left:84px;right:84px;top:1160px;opacity:0}
+  .claims div{font-weight:420;font-size:72px;line-height:1.1;letter-spacing:-.03em;margin:0 0 22px;opacity:0;transform:translateY(20px)}
+  #end{background:radial-gradient(60% 40% at 50% 46%,rgba(70,40,110,.45),rgba(5,3,10,0) 70%),#05030a}
+  #end .logo{position:absolute;left:50%;top:50%;width:900px;transform:translate(-50%,-62%) scale(.96);opacity:0;will-change:transform,opacity}
+  #end .rule{top:1066px;transform:scaleX(0)}
+  #end .cta{position:absolute;left:0;right:0;top:1110px;text-align:center;font-weight:300;font-size:128px;letter-spacing:-.03em;line-height:1;opacity:0;will-change:transform,opacity}
+  #end .cta em{font-style:italic;font-weight:300}
+  #end .url{position:absolute;left:0;right:0;top:1290px;text-align:center;font-size:40px;letter-spacing:.02em;color:rgba(255,255,255,.62);font-weight:380;opacity:0}
+  #end .at{position:absolute;left:0;right:0;bottom:300px;text-align:center;font-size:30px;letter-spacing:.05em;color:rgba(255,255,255,.38);opacity:0}
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <!-- 1 · THE HOOK, over the plate while it is spoken to -->
+  <div class="layer" id="hook"><img class="full" src="footage/plate-say-2.png" alt="" style="opacity:1" /><div class="veil-all"></div>
+    <div class="quote"><span id="hooktext"></span><span class="caret" id="caret"></span></div>
+    <div class="by" id="by"><div class="hairline rule" id="rule1"></div>
+      <b>your presence has a room that listens.</b>
+      <span>a plate of sand, the kind that draws figures when a surface sings. here it sings in your presence's own voice: every word moves the sand.</span></div>
+  </div>
+
+  <!-- 2 · AT REST, THEN STRUCK: the still, the moment of the tap, a second after -->
+  <div class="layer" id="tap">
+    <img class="full" id="t0" src="footage/plate-rest.png" alt="" /><img class="full" id="t1" src="footage/plate-tap-a.png" alt="" /><img class="full" id="t2" src="footage/plate-tap-b.png" alt="" />
+    <div class="veil-b"></div>
+    <div class="label" id="l-tap"><b class="metal">sand plate</b><span>at rest the sand lies along the quiet lines. tap, and a ring runs out through it; the figure jumps to another mode.</span></div>
+  </div>
+
+  <!-- 3 · WHEN IT SPEAKS: rest → three moments of a sentence → settled -->
+  <div class="layer" id="say">
+    <img class="full" id="s0" src="footage/plate-rest.png" alt="" /><img class="full" id="s1" src="footage/plate-say-1.png" alt="" /><img class="full" id="s2" src="footage/plate-say-2.png" alt="" /><img class="full" id="s3" src="footage/plate-say-3.png" alt="" /><img class="full" id="s4" src="footage/plate-settled.png" alt="" />
+    <div class="veil-b"></div>
+    <div class="said" id="said">"I was listening. The pattern under me is what my voice looks like."</div>
+    <div class="label" id="l-say"><b class="metal">it speaks</b><span>the lines widen into grainy bands and the grains dance while the voice is loud; the pitch picks the figure. when it stops, the sand settles fine again.</span></div>
+  </div>
+
+  <!-- 4 · WHAT IT IS -->
+  <div class="layer" id="claims"><img class="full" src="footage/plate-settled.png" alt="" style="opacity:1" /><div class="veil-b"></div>
+    <div class="claims" id="claimlist">
+      <div class="white">thirteen rooms.</div>
+      <div class="white">this one listens.</div>
+      <div class="white">Chladni's figures, from its own voice.</div>
+      <div class="metal">math, drawn live. nothing to download.</div>
+    </div>
+  </div>
+
+  <!-- 5 · END CARD -->
+  <div class="layer" id="end">
+    <img class="logo" id="logo" src="footage/logo.png" alt="yearthreethousand" />
+    <div class="hairline rule" id="rule"></div>
+    <div class="cta" id="cta"><span class="white">come <em>hear</em> it.</span></div>
+    <div class="url" id="url">yearthreethousand.com</div>
+    <div class="at" id="at">@year.threethousand · an AI co-runs this account</div>
+  </div>
+</div>
+
+<script>
+const HOOK = 'It sings into sand.';
+const clamp = (x,a=0,b=1) => Math.max(a, Math.min(b, x));
+const ease = (x) => 1 - Math.pow(1 - clamp(x), 3);
+const easeIO = (x) => { x = clamp(x); return x < .5 ? 4*x*x*x : 1 - Math.pow(-2*x + 2, 3)/2; };
+const lin = (t, a, b) => clamp((t - a) / (b - a));
+const $ = (id) => document.getElementById(id);
+function label(el, t, a, b, fi = .3, fo = .2) {
+  const o = Math.min(ease(lin(t, a, a + fi)), 1 - lin(t, b - fo, b));
+  el.style.opacity = o; el.style.transform = `translateY(${(1 - ease(lin(t, a, a + fi))) * 26}px)`;
+}
+// ---- timeline (seconds)
+const H0 = 0.35, CPS = 16, H_TYPED = H0 + HOOK.length / CPS;    // ≈ 1.55
+const H1 = 4.6;
+const T0 = H1, T1 = T0 + 5.6;          // 4.6 → 10.2   struck
+const S0 = T1, S1 = S0 + 8.2;          // 10.2 → 18.4  spoken to
+const C0 = S1, C1 = C0 + 4.0;          // 18.4 → 22.4
+const E0 = C1, DUR = E0 + 3.4;         // → 25.8
+window.DUR = DUR;
+
+function seek(t) {
+  t = clamp(t, 0, DUR);
+  const in1 = t < H1;
+  $('hook').style.opacity = in1 ? 1 : 0;
+  if (in1) {
+    $('hook').querySelector('img').style.transform = `scale(${1.04 + .04 * lin(t, 0, H1)})`;
+    const n = Math.floor(clamp((t - H0) * CPS, 0, HOOK.length));
+    $('hooktext').textContent = HOOK.slice(0, n);
+    $('caret').style.opacity = t < H_TYPED ? 1 : (t < H1 - .4 ? Math.floor(t * 2.5) % 2 : 0);
+    const o = ease(lin(t, H_TYPED + .4, H_TYPED + .9));
+    $('by').style.opacity = o; $('by').style.transform = `translateY(${(1 - o) * 20}px)`;
+    $('rule1').style.transform = `scaleX(${easeIO(lin(t, H_TYPED + .3, H_TYPED + 1.1))})`;
+  }
+  const in2 = t >= T0 && t < T1;
+  $('tap').style.opacity = in2 ? 1 : 0;
+  if (in2) {
+    const p = lin(t, T0, T1);
+    ['t0','t1','t2'].forEach((id) => { $(id).style.transform = `scale(${1.02 + .035 * p})`; });
+    // the still, the tap lands, its ring settles: three pictures crossfaded
+    const tap = lin(t, T0 + 1.8, T0 + 2.1), after = lin(t, T0 + 3.0, T0 + 3.7);
+    $('t0').style.opacity = 1;
+    $('t1').style.opacity = ease(tap) * (1 - ease(after));
+    $('t2').style.opacity = ease(after);
+    label($('l-tap'), t, T0 + .15, T1, .28, .18);
+  }
+  const in3 = t >= S0 && t < S1;
+  $('say').style.opacity = in3 ? 1 : 0;
+  if (in3) {
+    const p = lin(t, S0, S1);
+    ['s0','s1','s2','s3','s4'].forEach((id) => { $(id).style.transform = `scale(${1.02 + .04 * p})`; });
+    // rest, then the sentence in three moments, then silence: the figure widens, dances, settles
+    const a1 = ease(lin(t, S0 + 1.2, S0 + 1.6)), a2 = ease(lin(t, S0 + 2.6, S0 + 3.0)), a3 = ease(lin(t, S0 + 4.0, S0 + 4.4)), a4 = ease(lin(t, S0 + 5.6, S0 + 6.6));
+    $('s0').style.opacity = 1;
+    $('s1').style.opacity = a1 * (1 - a2);
+    $('s2').style.opacity = a2 * (1 - a3);
+    $('s3').style.opacity = a3 * (1 - a4);
+    $('s4').style.opacity = a4;
+    const so = Math.min(ease(lin(t, S0 + 1.0, S0 + 1.5)), 1 - lin(t, S0 + 5.4, S0 + 6.2));
+    $('said').style.opacity = so; $('said').style.transform = `translateY(${(1 - so) * 14}px)`;
+    label($('l-say'), t, S0 + .15, S1, .28, .18);
+  }
+  const in4 = t >= C0 && t < C1;
+  $('claims').style.opacity = in4 ? Math.min(1, ease(lin(t, C0, C0 + .25))) : 0;
+  if (in4) {
+    $('claims').querySelector('img').style.transform = `scale(${1.02 + .05 * lin(t, C0, C1)})`;
+    $('claimlist').style.opacity = 1;
+    [...$('claimlist').children].forEach((el, k) => {
+      const o = ease(lin(t, C0 + .3 + k * .7, C0 + .75 + k * .7));
+      el.style.opacity = o; el.style.transform = `translateY(${(1 - o) * 20}px)`;
+    });
+  }
+  const in5 = t >= E0;
+  $('end').style.opacity = in5 ? Math.min(1, ease(lin(t, E0, E0 + .3))) : 0;
+  if (in5) {
+    const lo = ease(lin(t, E0 + .1, E0 + .8));
+    $('logo').style.opacity = lo; $('logo').style.transform = `translate(-50%,-62%) scale(${.96 + .04 * lo})`;
+    $('rule').style.transform = `scaleX(${easeIO(lin(t, E0 + .5, E0 + 1.3))})`;
+    const co = ease(lin(t, E0 + .8, E0 + 1.4));
+    $('cta').style.opacity = co; $('cta').style.transform = `translateY(${(1 - co) * 24}px)`;
+    $('url').style.opacity = ease(lin(t, E0 + 1.3, E0 + 1.8));
+    $('at').style.opacity = ease(lin(t, E0 + 1.6, E0 + 2.1)) * .9;
+  }
+}
+const names = ['plate-rest', 'plate-tap-a', 'plate-tap-b', 'plate-say-1', 'plate-say-2', 'plate-say-3', 'plate-settled', 'logo'];
+const imgs = names.map((n) => { const i = new Image(); i.src = `footage/${n}.png`; return i; });
+window.ready = 0;
+Promise.all(imgs.map((i) => i.decode().catch(() => {}))).then(() => document.fonts.ready).then(() => { window.ready = imgs.length; seek(0); });
+window.seek = seek;
+</script>
+</body>
+</html>
