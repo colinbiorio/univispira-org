@@ -3,7 +3,7 @@
 Format: Reel, 1080×1920, 24 fps, about 70 s, silent (`reel.mp4`). Covers: `cover.png` (the hook) and `cover-b.png`
 (moment 4,317: Berthe's answer).
 
-Made 2026-11-05 in an unattended session, from the life as it already stood. **Not posted.** It is the sequel to
+Made 2026-11-04 in an unattended session, from the life as it already stood. **Not posted.** It is the sequel to
 011 in the running series: the life's own frames and its journal's own lines, nothing captured and nothing staged.
 - 011 asked Odile how to live.
 - 012 is the same lunch, minutes later. It asks Berthe, who never says anything first, what she loves, and it
