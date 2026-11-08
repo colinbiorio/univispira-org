@@ -87,3 +87,12 @@ Until the DNS is changed, the site is reachable at the repository's Pages URL.
   venv (pip refuses it as system Python); the ffmpeg now comes from `python3 -m venv
   /tmp/ad_venv && /tmp/ad_venv/bin/pip install imageio-ffmpeg`, passed to `render.mjs` as
   `FFMPEG=...`.
+
+- 2026-11-08 — A health check, read only. The site as built is sound: nine pages, no broken
+  internal links or anchors, every page fits a 390px phone, every image has alt text, no script
+  errors (checked against this folder served locally). But it is not reachable: univispira.org
+  still answers with Squarespace's "Coming Soon" page on every path, and because of the CNAME
+  file here, the GitHub Pages address (colinbiorio.github.io/univispira-org/) redirects to it.
+  HTTPS is not enforced (no certificate yet). Owed, and Colin's to do: point the domain at Pages
+  (the four A records and the `www` CNAME above), or take the CNAME out so the site serves at
+  github.io until then.
