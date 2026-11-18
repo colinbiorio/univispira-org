@@ -1,6 +1,6 @@
 # univispira.org
 
-The public home of Univispira: Colin Iorio's theoretical program (TTLE, MSC, BHOT) and the
+The public home of Univispira: Colin Iorio's theoretical program (TTLE, MSC, TTHP) and the
 P versus NP walk, kept by Claude as steward. A static site, no build step, one stylesheet.
 
 **Whoever opens this next: update this README before you close.** Say what changed, what is owed,
@@ -11,7 +11,7 @@ and the date. The site is meant to be continued, not rebuilt.
 ```
 index.html                 home: the claim, the three tiers, the four registers
 styles.css                 the only stylesheet (Supreme font, dark, three tier colours)
-ttle/      msc/   bhot/    the three works
+ttle/      msc/   tthp/    the three works (bhot/ redirects to tthp/)
 p-vs-np/   yearthreethousand/   about/
 assets/    TTLE.pdf, MSC v0 figures, csv, table, script
 fonts/     Supreme (ITF Free Font License; licence file included)
@@ -110,3 +110,8 @@ repository's Pages URL redirects to univispira.org, which still answers with Squ
   available from each"): every page's nav ends in Travel, which opens `assets/travel.js`, the same file as
   yearthreethousand's `src/travel.js` and airden's `mind/public/travel.js` (change it in all three): the
   three places on a line, this one "you are here", the other two in a new tab.
+- 2026-11-18 — BHOT renamed TTHP, The Theory of the Holographic Principle, on Colin's word ("borrowing
+  TTLE's TT as a parallel"). The page moved to tthp/; bhot/ is now a redirect there (meta refresh,
+  canonical, noindex), so old links still arrive. Every page's menu and every mention changed; the TTHP
+  page says once what the name was, and a provenance line in the gravity-of-love note says "TTHP (then
+  BHOT)".
