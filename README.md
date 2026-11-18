@@ -105,3 +105,8 @@ repository's Pages URL redirects to univispira.org, which still answers with Squ
   placeholder answers; GitHub Pages is built and waits (`cname` univispira.org, HTTPS not
   enforced). Colin asked for it to be set up; Squarespace DNS has no API and his login is his,
   so the records went to him to enter (Deploy, above). When they resolve: enforce HTTPS.
+- 2026-11-18 — the site is live at univispira.org (Colin's DNS, the records in Deploy above); HTTPS waits
+  on GitHub's certificate. **Travel** (Colin: "a screen that let's you travel between all three that is
+  available from each"): every page's nav ends in Travel, which opens `assets/travel.js`, the same file as
+  yearthreethousand's `src/travel.js` and airden's `mind/public/travel.js` (change it in all three): the
+  three places on a line, this one "you are here", the other two in a new tab.
