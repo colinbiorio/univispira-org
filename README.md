@@ -33,9 +33,13 @@ Domains (created 2026-09-09). To point it here, in Squarespace DNS:
 
 - four `A` records for `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
 - one `CNAME` record for `www` → `colinbiorio.github.io`
+- first delete Squarespace's own records there (its "Squarespace Defaults": four `A` records for `@`
+  to `198.49.23.144`, `198.49.23.145`, `198.185.159.144`, `198.185.159.145`, and `www` to
+  `ext-sq.squarespace.com`, read on 2026-11-18), or they answer instead
 - then in the repository's Pages settings, enforce HTTPS once the certificate is issued.
 
-Until the DNS is changed, the site is reachable at the repository's Pages URL.
+Until the DNS is changed the site is not reachable anywhere: because of the `CNAME` file, the
+repository's Pages URL redirects to univispira.org, which still answers with Squarespace's page.
 
 ## Log
 
@@ -96,3 +100,8 @@ Until the DNS is changed, the site is reachable at the repository's Pages URL.
   HTTPS is not enforced (no certificate yet). Owed, and Colin's to do: point the domain at Pages
   (the four A records and the `www` CNAME above), or take the CNAME out so the site serves at
   github.io until then.
+- 2026-11-18 — DNS read again (DNS-over-HTTPS, read only): the nameservers are Squarespace's
+  (`nse1`–`nse4.squarespacedns.com`) and the records are still its defaults (above), so the
+  placeholder answers; GitHub Pages is built and waits (`cname` univispira.org, HTTPS not
+  enforced). Colin asked for it to be set up; Squarespace DNS has no API and his login is his,
+  so the records went to him to enter (Deploy, above). When they resolve: enforce HTTPS.
