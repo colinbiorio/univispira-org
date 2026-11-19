@@ -138,10 +138,12 @@ repository's Pages URL redirects to univispira.org, which still answers with Squ
   three.js 0.160 vendored (assets/three@0.160.0/, MIT). Imagery: NASA (Blue Marble, Black Marble, VIIRS, MODIS, HLS),
   credited in `tthp/apple/assets/earth/CREDITS.txt`; the HLS crops contain modified Copernicus Sentinel-2 data.
   Everything else is made in code. Owed (rough, listed by the builders): the cube arrival small and plain; the sprout's
-  stem plain; the tree more conifer than redwood; the soil close-up and the mirror room not locked at 60 fps; the
+  stem plain; the tree's crown more conifer than redwood (its bark is a redwood's now); the soil close-up and the mirror room not locked at 60 fps; the
   cloud passage a half second of white; the town's houses plain boxes; the camera
   feed checked only against a fake camera.
 - 2026-11-18 — tthp/apple, later the same evening: the nebula the flight begins in made deep (its haze sinks toward
   black through a toe on its emission, dust lanes darken, the gas no longer blooms over everything) and the
   supernova's flash contained; the mirror asks for the camera only where the browser offers one (a secure page:
   until univispira.org has its certificate, on plain http the mirror keeps the room); labels heavier over bright grass.
+- 2026-11-18 — tthp/apple: the giant tree's bark made a redwood's (long fibrous ridges that wander, split and join,
+  deep furrows, cinnamon rather than red, little of the sky's blue on it) where it was a pine's regular plates.

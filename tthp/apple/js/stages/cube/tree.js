@@ -21,22 +21,26 @@ uniform float uMode; uniform float uTexel;
 varying vec2 vUv;
 ${PERIODIC}
 float barkH(vec2 uv) {
-  vec2 q = uv * vec2(6.0, 2.0);
-  q.x += pfbm2(uv * vec2(3.0, 2.0), vec2(3.0, 2.0), 3) * 0.9;
-  vec2 v = pvoronoi2(q, vec2(6.0, 2.0));
-  float plate = smoothstep(0.0, 0.42, v.y - v.x);
-  float fib = pfbm2(uv * vec2(80.0, 4.0), vec2(80.0, 4.0), 4);
-  float fib2 = pfbm2(uv * vec2(28.0, 10.0), vec2(28.0, 10.0), 3);
-  return plate * (0.74 + 0.22 * fib2) + fib * 0.14 * (0.3 + plate);
+  // a redwood's: long fibrous ridges running up the trunk, wandering, splitting and joining, deep furrows between
+  // (five to a tile, sixteen tiles round: some eighty ridges about the trunk)
+  float wx = pfbm2(uv * vec2(2.0, 1.0), vec2(2.0, 1.0), 3) * 1.2 + pfbm2(uv * vec2(5.0, 3.0) + 4.3, vec2(5.0, 3.0), 3) * 0.5;
+  float r1 = 1.0 - abs(fract(uv.x * 5.0 + wx) * 2.0 - 1.0);
+  float r2 = 1.0 - abs(fract(uv.x * 5.0 + 0.5 + wx * 0.7 + pfbm2(uv * vec2(4.0, 2.0) + 9.1, vec2(4.0, 2.0), 3) * 0.7) * 2.0 - 1.0);
+  float split = smoothstep(0.0, 0.3, pfbm2(uv * vec2(6.0, 4.0) + 2.7, vec2(6.0, 4.0), 3));
+  float r = smoothstep(0.15, 0.95, mix(r1, max(r1 * 0.85, r2 * 0.9), split));
+  float brk = smoothstep(0.3, 0.42, abs(pfbm2(uv * vec2(10.0, 5.0) + 1.3, vec2(10.0, 5.0), 3)));    // a ridge broken across, now and then
+  float fib = pfbm2(uv * vec2(90.0, 3.0), vec2(90.0, 3.0), 4);
+  float fib2 = pfbm2(uv * vec2(35.0, 7.0), vec2(35.0, 7.0), 3);
+  return r * (0.8 + 0.16 * fib2) * (1.0 - 0.22 * brk) + fib * 0.15 * (0.35 + r);
 }
 void main() {
   vec2 uv = vUv;
   float h = barkH(uv);
   if (uMode < 0.5) {
-    vec3 deep = vec3(0.040, 0.016, 0.009), plate = vec3(0.30, 0.125, 0.065), grey = vec3(0.30, 0.26, 0.23);
+    vec3 deep = vec3(0.034, 0.016, 0.01), plate = vec3(0.27, 0.13, 0.075), grey = vec3(0.3, 0.26, 0.22);       // cinnamon, browner than red
     vec3 c = mix(deep, plate, smoothstep(0.05, 0.5, h));
-    float weather = smoothstep(0.5, 0.85, h + pfbm2(uv * vec2(8.0, 3.0), vec2(8.0, 3.0), 3) * 0.7);
-    c = mix(c, grey, weather * 0.5);
+    float weather = smoothstep(0.55, 0.9, h + pfbm2(uv * vec2(8.0, 3.0), vec2(8.0, 3.0), 3) * 0.6);
+    c = mix(c, grey, weather * 0.55);
     c *= 0.82 + 0.36 * (pfbm2(uv * vec2(40.0, 6.0), vec2(40.0, 6.0), 3) + 0.5);
     float lic = smoothstep(0.66, 0.74, pfbm2(uv * vec2(14.0, 9.0) + 7.0, vec2(14.0, 9.0), 4) + 0.5) * smoothstep(0.4, 0.7, h);
     c = mix(c, vec3(0.30, 0.34, 0.22), lic * 0.55);
@@ -137,7 +141,7 @@ export function createTree(ctx, { noise } = {}) {
   }
 
   // ---- materials
-  const trunkMat = new THREE.MeshStandardMaterial({ map: barkCol, normalMap: barkNrm, normalScale: new THREE.Vector2(1.3, 1.3), roughness: 0.92, metalness: 0, envMapIntensity: 0.45 });
+  const trunkMat = new THREE.MeshStandardMaterial({ map: barkCol, normalMap: barkNrm, normalScale: new THREE.Vector2(1.3, 1.3), roughness: 0.95, metalness: 0, envMapIntensity: 0.22 });   // little of the sky's blue on its ridges
   const trunkVertexHead = TRUNK_GLSL + 'attribute vec3 aTP; attribute vec3 aTA; attribute vec3 aTB; attribute float aKind; varying vec3 vTP; varying float vKind; varying vec3 vOP; vec3 gP;';
   const trunkNormal = /* glsl */`
     gP = trunkP(aTP);
