@@ -147,3 +147,6 @@ repository's Pages URL redirects to univispira.org, which still answers with Squ
   until univispira.org has its certificate, on plain http the mirror keeps the room); labels heavier over bright grass.
 - 2026-11-18 — tthp/apple: the giant tree's bark made a redwood's (long fibrous ridges that wander, split and join,
   deep furrows, cinnamon rather than red, little of the sky's blue on it) where it was a pine's regular plates.
+- 2026-11-18 — tthp/apple checked in WebKit (Playwright's build of Safari's engine, headless): one whole loop, every state,
+  no errors, ~60 fps, the camera question declined and the mirror keeping the room. Colin's four lines given a dark
+  halo under their glow, legible over the mirror's bright doorway.
