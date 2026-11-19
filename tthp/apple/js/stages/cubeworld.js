@@ -249,8 +249,10 @@ export async function createCubeWorld(ctx) {
     let granted = false;
     try { const st = await navigator.permissions?.query({ name: 'camera' }); granted = st?.state === 'granted'; } catch { granted = false; }
     let yes = granted;
-    if (!granted) yes = await ctx.ui.ask('May univispira momentarily peer through that camera of yours?', { yes: 'Allow', no: 'Not now', note: 'Nothing is recorded or sent anywhere.' });
-    if (yes && navigator.mediaDevices?.getUserMedia && await room.useCamera()) await ctx.anim(1.8, (k, e) => { room.videoMix = e; }, ctx.ease.inOut);
+    // a camera can be asked for only where the browser offers one (a secure page): elsewhere the mirror keeps the room
+    const can = !!navigator.mediaDevices?.getUserMedia;
+    if (!granted && can) yes = await ctx.ui.ask('May univispira momentarily peer through that camera of yours?', { yes: 'Allow', no: 'Not now', note: 'Nothing is recorded or sent anywhere.' });
+    if (yes && can && await room.useCamera()) await ctx.anim(1.8, (k, e) => { room.videoMix = e; }, ctx.ease.inOut);
     await ctx.ui.words(words);
     await ctx.wait(3);
     await ctx.ui.unwords();
