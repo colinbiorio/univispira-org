@@ -295,11 +295,11 @@ void march(int cloud, vec2 iv, vec3 ro, vec3 rd, float jit, inout vec3 col, inou
       for (int k = 0; k < 4; k++) { vec3 l = uLightP[k].xyz - p; lit += uLightC[k] * (uLightP[k].w / (1.0 + dot(l, l) * 0.0004)); }
       float rs = length(p - uSN.xyz);
       float front = exp(-pow((rs - uSN.w) / (18.0 + 0.12 * uSN.w), 2.0)) + 0.1 * step(rs, uSN.w);
-      vec3 S = palette(hue) * (0.11 + 0.28 * d + 1.9 * glow) * (0.45 + lit);
+      vec3 S = palette(hue) * (0.035 + 0.22 * d + 2.3 * glow) * (0.45 + lit);     // the sheets carry the colour; the haze between them stays deep
       S += uSNCol * (uSNI * front / (1.0 + rs * rs * 0.00003));
       if (cloud == 1) S *= 0.35 + 0.65 * smoothstep(0.0, 0.3, uSNI);
-      S *= 1.0 - 0.92 * dust;
-      float sigma = d * 0.009 + dust * 0.075;
+      S *= 1.0 - 0.97 * dust;
+      float sigma = d * 0.007 + dust * 0.2;                                    // dust lanes that really darken
       float a = exp(-sigma * dt);
       col += T * S * (1.0 - a);
       T *= a;
@@ -324,7 +324,9 @@ void main() {
   bool aFirst = ia.y > 0.0 && (ib.y <= 0.0 || ia.x <= ib.x);
   if (aFirst) { march(0, ia, ro, rd, jit, col, T); if (ib.y > 0.0) march(1, ib, ro, rd, jit, col, T); }
   else { if (ib.y > 0.0) march(1, ib, ro, rd, jit, col, T); if (ia.y > 0.0) march(0, ia, ro, rd, jit, col, T); }
-  gl_FragColor = vec4(col * uBright, T);
+  col *= 0.6 * uBright;
+  col = col * col / (col + 0.1);       // a toe: the faint haze sinks toward black, the bright sheets keep their light
+  gl_FragColor = vec4(col, T);
 }`;
 
 export function makeNebula(ctx, noise) {

@@ -173,10 +173,10 @@ export async function createCosmos(ctx) {
     const showWorlds = P.sights.has('planets') && P.mode !== 'idle';
     giant.group.visible = rocky.group.visible = icy.group.visible = showWorlds;
     const f1 = Math.min(1, flash);
-    stage.bloom.strength = 0.75 + 0.9 * f1;
-    stage.bloom.radius = 0.48 + 0.25 * f1;
-    stage.bloom.threshold = 0.6 - 0.25 * f1;
-    stage.exposure = 1.0 + 0.3 * f1;
+    stage.bloom.strength = 0.6 + 0.6 * f1;
+    stage.bloom.radius = 0.45 + 0.2 * f1;
+    stage.bloom.threshold = 1.0 - 0.45 * f1;       // the gas itself does not glow over everything: only stars, and the flash
+    stage.exposure = 0.88 + 0.22 * f1;
 
     // the worlds turn
     giant.update(t); rocky.update(t); icy.update(t); sunE.update(t); bigStar.update(t); sunC.update(t);
