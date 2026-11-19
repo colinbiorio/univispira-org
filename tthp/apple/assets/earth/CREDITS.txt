@@ -1,0 +1,28 @@
+Imagery for the Earth and the way down to Wilmington (tthp/apple, stages/earth.js).
+All of it was fetched from NASA GIBS (Global Imagery Browse Services, NASA ESDIS),
+https://gibs.earthdata.nasa.gov/ (WMS, EPSG:4326), on 18 November 2026, then checked,
+re-encoded (metadata stripped) and resized. NASA imagery is public domain; please credit NASA.
+
+day_4096.jpg, day_2048.jpg   NASA Earth Observatory, Blue Marble: Next Generation with shaded relief
+                             and bathymetry (Reto Stockli; July 2004; GIBS layer BlueMarble_ShadedRelief_Bathymetry,
+                             fetched at 8192 x 4096), the open sea blended toward the plain Blue Marble
+                             (GIBS layer BlueMarble_NextGeneration) so it reads as it does from orbit.
+night_4096.jpg, night_2048.jpg  NASA Earth Observatory, Black Marble 2016 (Suomi NPP VIIRS day/night band;
+                             GIBS layer VIIRS_Black_Marble); only the lights of towns kept.
+clouds_4096.jpg, clouds_2048.jpg  The clouds of one real day, 24 October 2025: VIIRS Corrected Reflectance
+                             True Color from Suomi NPP and NOAA-20 (GIBS layers VIIRS_SNPP_CorrectedReflectance_TrueColor,
+                             VIIRS_NOAA20_CorrectedReflectance_TrueColor), the darker of the two per pixel (sun glint
+                             moves, clouds hardly) minus the cloud-free Blue Marble; the dark polar night filled with
+                             a made-up cover.
+water_2048.png               MODIS land/water mask, MOD44W (GIBS layer MODIS_Terra_L3_Land_Water_Mask, 2015).
+r1.jpg, r1_water.png         The Carolinas (30.5-38 N, 84-74 W): the same Blue Marble layers at 500 m; MOD44W.
+r2.jpg, r2_water.png         Cape Fear (33.55-34.85 N, 78.75-77.25 W), 16 October 2025: NASA HLS S30
+                             (Harmonized Landsat and Sentinel-2, 30 m; GIBS layer HLS_S30_Nadir_BRDF_Adjusted_Reflectance),
+                             holes filled from r1; MOD44W. Contains modified Copernicus Sentinel-2 data (2025).
+r3.jpg, r3_water.png         Wilmington (34.12-34.32 N, 78.00-77.76 W), the same HLS S30 day, smoothed;
+                             water from its colours and MOD44W. Contains modified Copernicus Sentinel-2 data (2025).
+rc_clouds.jpg                The south-east's clouds of 24 October 2025 at 375 m (VIIRS SNPP, as above).
+
+Everything closer than the satellites see (the neighbourhood, its houses and trees, the clouds one
+flies through, the kitchen, the marble, the cutting board) is made in code (stages/earth/*.js);
+no real house or address is shown.
