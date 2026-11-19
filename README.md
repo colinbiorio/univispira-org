@@ -139,5 +139,9 @@ repository's Pages URL redirects to univispira.org, which still answers with Squ
   credited in `tthp/apple/assets/earth/CREDITS.txt`; the HLS crops contain modified Copernicus Sentinel-2 data.
   Everything else is made in code. Owed (rough, listed by the builders): the cube arrival small and plain; the sprout's
   stem plain; the tree more conifer than redwood; the soil close-up and the mirror room not locked at 60 fps; the
-  supernova's peak flash too large; the cloud passage a half second of white; the town's houses plain boxes; the camera
+  cloud passage a half second of white; the town's houses plain boxes; the camera
   feed checked only against a fake camera.
+- 2026-11-18 — tthp/apple, later the same evening: the nebula the flight begins in made deep (its haze sinks toward
+  black through a toe on its emission, dust lanes darken, the gas no longer blooms over everything) and the
+  supernova's flash contained; the mirror asks for the camera only where the browser offers one (a secure page:
+  until univispira.org has its certificate, on plain http the mirror keeps the room); labels heavier over bright grass.
